@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+img{
+    width:100%;
+    position:relative;
+    height: 750px;
+}
+#container{
+    width:100%;
+    height:900px;
+}
+button{
+    color:white;
+    font-size: 23px;
+    font-weight: bold;
+    padding:15px 22px;
+    background-color: transparent;
+    border:3px solid white;
+    border-radius:5px;
+    margin-left:52px;
+    transition: transform 0.3 ease;
+}
+button:hover{
+    transform: scale(1.1);
+}
+ #sub{
+    position: absolute;
+    left:75%;
+    top:40%;
+ }
+ h1{
+  font-size: 34px;
+   color:white;
+   font-weight: bold;
+ }
+</style>
+<body>
+    <div id="container">
+    <img src="phto3.png"><br>
+    <div id="sub">
+    <h1>Happy Birthday!</h1>
+    <button id="btn">Click</button>
+   </div>
+    </div>
+    <script>
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            window.location.href="index2.html";
+        })
+    </script>
+</body>
+</html>

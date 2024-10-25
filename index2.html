@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #container {
+        display: flex;
+        font-size: 30px;
+        gap: 10px;
+    }
+
+    span {
+        font-weight: bold;
+        color: rgb(143, 23, 23);
+    }
+
+    p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    
+    #img1,#img2,#img3,#img4,#img5{
+        width:100%;
+        height:630px;
+        object-fit: cover;
+        
+    }
+
+    #main{
+        width:1300px;
+        height:1000px;
+        overflow:hidden;
+    }
+
+</style>
+
+<body>
+    <div id="container">
+        <div>
+            <h1>Wish You A <span>Very Happy Birthday </span>Bhaiya.</h1>
+            <p>May god bless you with a lot of <span>happiness</span> and joy in your life😊😊.I wish for you the fulfillment of all
+                your dreams.</p>
+            <p><span>Janamdin</span> ki dher saari <span>shubhkaamanye</span> bhaiya😇😇.Aap aajiwan khush rhe ,muskurate rhe aur swast rhe😀😀.</p>
+        </div>
+        <div id="main"></div>
+    </div>
+    <script>
+
+        let main = document.getElementById("main");
+        let img1 = document.createElement("img");
+        let img2 = document.createElement("img");
+        let img3 = document.createElement("img");
+        let img4 = document.createElement("img");
+        let img5 = document.createElement("img");
+        let img6 = document.createElement("img");
+
+
+        img1.src = "trip.jpeg";
+        img2.src = "photo.png";
+        img3.src = "WhatsApp Image 2024-10-22 at 12.48.37 AM.jpeg";
+        img4.src = "phto2.png";
+        img5.src = "Screenshot 2024-10-25 195535.png";
+        img6.src = "Screenshot 2024-10-25 211543.png";
+
+        
+
+        img1.id="img1";
+        img2.id="img2";
+        img3.id="img3";
+        img4.id="img4";
+        img5.id="img5";
+
+
+        let arr = [img1, img2, img3, img4, img5];
+        let i = 0;
+        main.append(arr[i]);
+
+        function changeImage() {
+            main.removeChild(arr[i]);  
+            i = (i + 1) % arr.length;  
+            main.append(arr[i]);       
+        }
+
+        setInterval(changeImage, 3000);
+
+    </script>
+</body>
+
+</html>
